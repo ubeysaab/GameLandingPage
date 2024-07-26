@@ -1,0 +1,119 @@
+// VLCCU
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Indie+Flower&family=Inter:wght@100..900&family=Rowdies:wght@300;400;700&display=swap");
+
+@import "./variables";
+@import "./breakpoints";
+@import "./mixins";
+
+// components
+@import "./components/header";
+@import "./components/section";
+@import "./components/welcome";
+@import "./components/button";
+
+// TODO : RESET
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; //
+  // user-select: none;
+}
+
+html,
+body {
+  font-size: 100%;
+  position: relative;
+}
+p {
+  color: $primary-color;
+}
+
+body {
+  @include fontfamily("Rowdies");
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+li,
+ul {
+  list-style-type: none;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+iframe {
+  border: 0;
+}
+
+#root,
+.App {
+  height: 100%;
+}
+
+// ! classes
+.bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(black, 0.8);
+  }
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondry-color;
+}
+
+.title {
+  font-weight: 700px;
+  span {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+.container {
+  max-width: 1670px;
+  margin: auto;
+}
+
+m-t-4 {
+  margin-top: 4rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.border-red {
+  border: 1px solid red;
+}
+
+
+
+.swiper,.swiper-slide{
+height: 100%;
+// @include flex(center,center);
+}

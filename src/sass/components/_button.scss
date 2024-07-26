@@ -1,0 +1,22 @@
+.btn{
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: 0;
+  outline: 0;
+  pointer-events: cursor;
+  padding: 1.5rem 5rem;
+  @include fontfamily("Rowdies");
+  
+  border-top-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  text-transform: capitalize;
+
+  &--primary{
+    background-color: $primary-color;
+  }
+
+  &--secondary{
+    background-color: $secondry-color;
+  }
+}

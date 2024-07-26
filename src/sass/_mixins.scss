@@ -1,0 +1,9 @@
+@mixin fontfamily($ff:cursive){
+  font-family: $ff;
+}
+
+@mixin flex($align-items,$justify-content){
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
