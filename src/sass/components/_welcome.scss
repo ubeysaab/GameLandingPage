@@ -13,7 +13,7 @@
   &__info{
     @include flex(flex-start,flex-end);
     &__content {
-      padding-left: 15rem;
+      padding-left: 5rem;
       .description{
         font-size: 1rem;
 
@@ -38,8 +38,8 @@
   &__img{
     @include flex(flex-end,flex-start);
     &__slide{
-      height: 915px;
-      width: 915px;
+      height: 550px;
+      width: 560px;
       overflow: hidden;
       
     }

@@ -2,16 +2,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Mousewheel, Navigation, Pagination } from "swiper/modules";
 
-
 import Welcome from "../components/Welcome";
 
-
-
-
-
+import Champion from "../components/Champion";
 
 const swiperOptions = {
-  modules:[Navigation,EffectFade,Mousewheel,Pagination],
+  modules: [Navigation, EffectFade, Mousewheel, Pagination],
   direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 0,
@@ -25,15 +21,14 @@ function Home() {
   return (
     <Swiper {...swiperOptions}>
       <SwiperSlide>
-      {({ isActive }) => (
-      <Welcome isActive={isActive}/>
-    )}
-
-
+        {({ isActive }) => {
+          return <Champion isActive={isActive} />;
+        }}
       </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+
+      <SwiperSlide>
+        {({ isActive }) => <Welcome isActive={isActive} />}
+      </SwiperSlide>
     </Swiper>
   );
 }

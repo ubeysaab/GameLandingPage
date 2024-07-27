@@ -15,7 +15,7 @@ import 'swiper/css/mousewheel'
 
 
 
-
+// TODO : first import the components css then your css in the app not where you use the component
 
 
 import "./sass/index.scss"
